@@ -1,2 +1,1 @@
-def search4letters(word, letters):
-    return set(letters).intersection(word)
+import flask
