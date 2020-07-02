@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -9,5 +9,8 @@ def render() -> 'html':
     return render_template('entry.html',
                            tytul="Strona!")
 
-
-app.run()
+@app.route('/log_to_file')
+def log_to_file() -> 'file':
+    pass
+    #with open('data.log','a') as file
+app.run(debug=True)

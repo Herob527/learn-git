@@ -3,11 +3,12 @@
 {% block body%}
 
 <h2> {{ tytul }}</h2>
-<form method="post" action="/log_to_file">
-    <input type="text" name="imie" maxlength="50" />
-    <input type="text" name="nazw" maxlength="50" />
-    <input type="number" name="wiek" />
-    <input type="submit" />
+<form method="post" action="/log_to_file" id='form_to_log'>
+    <p class="input_element input_heading"> Wprowadź swoje dane </p>
+    <input type="text" name="imie" class='input_element' maxlength="50" placeholder="Podaj imię" />
+    <input type="text" name="nazw" class='input_element' maxlength="50" placeholder="Podaj nazwisko" />
+    <input type="number" name="wiek" class='input_element' min='0' max='120' placeholder="Podaj wiek"/>
+    <input type="submit" class='input_element' value="Prześlij"/>
 </form>
 
 {% endblock %}
